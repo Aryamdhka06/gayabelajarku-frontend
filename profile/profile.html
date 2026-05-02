@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="profile.css" />
+  <title>Profile | GayaBelajarKu</title>
+</head>
+<body>
+
+  <!-- ═══ SIDEBAR KIRI ═══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      <span class="logo-text">GayaBelajarKu</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="../home/home.html" class="nav-item" data-tooltip="Home">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="../platform/index.html" class="nav-item" data-tooltip="Platform Belajar">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Platform</span>
+      </a>
+      <a href="../ai/index.html" class="nav-item" data-tooltip="AI Support">
+        <i class="fa-solid fa-robot"></i>
+        <span>AI Support</span>
+      </a>
+      <a href="../tesgaya/index.html" class="nav-item" data-tooltip="Tes Gaya Belajar">
+        <i class="fa-solid fa-list-check"></i>
+        <span>Tes Gaya</span>
+      </a>
+      <a href="../profile/profile.html" class="nav-item active" data-tooltip="Profil">
+        <i class="fa-solid fa-user"></i>
+        <span>Profil</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="nav-item" data-tooltip="Pengaturan">
+        <i class="fa-solid fa-gear"></i>
+        <span>Pengaturan</span>
+      </a>
+    </div>
+
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fa-solid fa-chevron-left" id="toggleIcon"></i>
+    </button>
+  </aside>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="breadcrumb">
+          <span class="bc-sub">Halaman</span>
+          <h1 class="bc-title">Profil Saya</h1>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-bar">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" placeholder="Cari materi..." />
+        </div>
+        <div class="avatar-topbar" id="avatarTopbar">GK</div>
+      </div>
+    </div>
+
+    <!-- ═══ PROFILE CONTENT ═══ -->
+    <div class="profile-wrapper">
+
+      <!-- COVER & AVATAR -->
+      <div class="profile-cover reveal">
+        <div class="cover-bg">
+          <div class="cover-orb orb1"></div>
+          <div class="cover-orb orb2"></div>
+          <div class="cover-orb orb3"></div>
+        </div>
+        <div class="cover-content">
+          <div class="avatar-ring">
+            <div class="avatar-img" id="avatarDisplay">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="avatar-status"></div>
+          </div>
+          <div class="cover-info">
+            <h2 id="profileName">Loading...</h2>
+            <p id="profileEmail" class="profile-email">—</p>
+            <div class="profile-badges">
+              <span class="badge badge-active"><i class="fa-solid fa-circle"></i> Aktif</span>
+              <span class="badge badge-member">Anggota GayaBelajarKu</span>
+            </div>
+          </div>
+          <div class="cover-actions">
+            <button class="btn-edit" id="btnEditProfile">
+              <i class="fa-solid fa-pen-to-square"></i> Edit Profil
+            </button>
+            <button class="btn-logout" id="btnLogout">
+              <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRID BAWAH -->
+      <div class="profile-grid">
+
+        <!-- COL KIRI: Info + Sosial -->
+        <div class="profile-col-left">
+
+          <!-- Info Card -->
+          <div class="p-card reveal">
+            <div class="p-card-header">
+              <i class="fa-solid fa-circle-info"></i>
+              <h3>Informasi</h3>
+            </div>
+            <div class="info-list">
+              <div class="info-row">
+                <span class="ir-label"><i class="fa-solid fa-user"></i> Nama</span>
+                <span class="ir-val" id="infoNama">—</span>
+              </div>
+              <div class="info-row">
+                <span class="ir-label"><i class="fa-solid fa-envelope"></i> Email</span>
+                <span class="ir-val" id="infoEmail">—</span>
+              </div>
+              <div class="info-row">
+                <span class="ir-label"><i class="fa-solid fa-calendar"></i> Sekolah</span>
+                <span class="ir-val" id="infoJoin">—</span>
+              </div>
+              <div class="info-row">
+                <span class="ir-label"><i class="fa-solid fa-location-dot"></i> Kelas</span>
+                <span class="ir-val" id="infoLokasi">—</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio Card -->
+          <div class="p-card reveal">
+            <div class="p-card-header">
+              <i class="fa-solid fa-feather-pointed"></i>
+              <h3>Bio</h3>
+            </div>
+            <p class="bio-text" id="bioParagraph">
+              nothing
+            </p>
+          </div>
+
+          <!-- Sosial Card -->
+          <div class="p-card reveal">
+            <div class="p-card-header">
+              <i class="fa-solid fa-share-nodes"></i>
+              <h3>Media Sosial</h3>
+            </div>
+            <div class="social-grid">
+              <a href="#" class="social-chip linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="#" class="social-chip github">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="#" class="social-chip twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+                <span>Twitter / X</span>
+              </a>
+              <a href="#" class="social-chip instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COL KANAN: Tes Gaya Belajar + Aktivitas -->
+        <div class="profile-col-right">
+
+          <!-- Hasil Tes Gaya Belajar -->
+          <div class="p-card gaya-result-card reveal">
+            <div class="p-card-header">
+              <i class="fa-solid fa-brain"></i>
+              <h3>Hasil Tes Gaya Belajar</h3>
+            </div>
+
+            <!-- Dominant style -->
+            <div class="dominant-style" id="dominantStyle">
+              <div class="ds-icon"><i class="fa-solid fa-star"></i></div>
+              <div>
+                <p class="ds-label">Gaya Belajar Dominan</p>
+                <h4 class="ds-name" id="dominantName">Belum Tes</h4>
+              </div>
+              <div class="ds-badge" id="dominantBadge">—</div>
+            </div>
+
+            <!-- Score bars -->
+            <div class="score-bars">
+              <div class="score-row">
+                <div class="sr-top">
+                  <span class="sr-name"><i class="fa-solid fa-eye"></i> Visual</span>
+                  <span class="sr-val" id="scoreVisual">0</span>
+                </div>
+                <div class="sr-bar">
+                  <div class="sr-fill visual-fill" id="barVisual" style="width:0%"></div>
+                </div>
+              </div>
+              <div class="score-row">
+                <div class="sr-top">
+                  <span class="sr-name"><i class="fa-solid fa-headphones"></i> Auditori</span>
+                  <span class="sr-val" id="scoreAuditori">0</span>
+                </div>
+                <div class="sr-bar">
+                  <div class="sr-fill auditori-fill" id="barAuditori" style="width:0%"></div>
+                </div>
+              </div>
+              <div class="score-row">
+                <div class="sr-top">
+                  <span class="sr-name"><i class="fa-solid fa-hand"></i> Kinestetik</span>
+                  <span class="sr-val" id="scoreKinestetik">0</span>
+                </div>
+                <div class="sr-bar">
+                  <div class="sr-fill kinestetik-fill" id="barKinestetik" style="width:0%"></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="gaya-desc" id="gayaDesc">Silakan lakukan tes gaya belajar untuk melihat hasil lengkap!</p>
+          </div>
+
+          <!-- Statistik Aktivitas -->
+          <div class="p-card reveal">
+            <div class="p-card-header">
+              <i class="fa-solid fa-chart-line"></i>
+              <h3>Statistik</h3>
+            </div>
+            <div class="stats-row">
+              <div class="stat-box purple">
+                <i class="fa-solid fa-list-check"></i>
+                <span class="sb-val">1</span>
+                <span class="sb-lbl">Tes Selesai</span>
+              </div>
+              <div class="stat-box pink">
+                <i class="fa-solid fa-book-open"></i>
+                <span class="sb-val">0</span>
+                <span class="sb-lbl">Materi Dibaca</span>
+              </div>
+              <div class="stat-box blue">
+                <i class="fa-solid fa-fire"></i>
+                <span class="sb-val">3</span>
+                <span class="sb-lbl">Hari Streak</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Tes Gaya -->
+          <div class="p-card cta-card reveal">
+            <div class="cta-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="cta-text">
+              <h4>Belum pernah tes?</h4>
+              <p>Temukan gaya belajarmu sekarang dan maksimalkan potensimu!</p>
+            </div>
+            <a href="../tesgaya/index.html" class="btn-cta">
+              Mulai Tes <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div><!-- /profile-grid -->
+
+    </div><!-- /profile-wrapper -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 <strong>GayaBelajarKu</strong> — All Rights Reserved</p>
+    </footer>
+
+  </main>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- EDIT MODAL -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-pen-to-square"></i> Edit Profil</h3>
+        <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <input type="text" id="editNama" placeholder="Nama kamu..." />
+        </div>
+        <div class="form-group">
+          <label>Bio</label>
+          <textarea id="editBio" rows="3" placeholder="Ceritakan tentang dirimu..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Lokasi</label>
+          <input type="text" id="editLokasi" placeholder="Kota, Negara..." />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-cancel" id="btnCancel">Batal</button>
+        <button class="btn-save" id="btnSave"><i class="fa-solid fa-check"></i> Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

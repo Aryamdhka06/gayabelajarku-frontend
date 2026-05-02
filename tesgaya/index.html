@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tes.css" />
+  <title>Tes Gaya Belajar | GayaBelajarKu</title>
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="bg-layer">
+    <div class="blob bl1"></div>
+    <div class="blob bl2"></div>
+    <div class="blob bl3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- TOPBAR -->
+  <nav class="topnav" id="topnav">
+    <div class="nav-inner">
+      <a href="../home/home.html" class="nav-brand">
+        <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+        <span class="brand-name">GayaBelajarKu</span>
+      </a>
+      <div class="nav-links">
+        <a href="../home/home.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="../platform/index.html"><i class="fa-solid fa-book-open"></i> Platform</a>
+        <a href="../ai/index.html"><i class="fa-solid fa-robot"></i> AI Support</a>
+        <a href="../profile/profile.html" class="btn-profile">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+      <button class="nav-burger" id="navBurger"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../home/home.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="../platform/index.html"><i class="fa-solid fa-book-open"></i> Platform</a>
+      <a href="../ai/index.html"><i class="fa-solid fa-robot"></i> AI Support</a>
+    </div>
+  </nav>
+
+  <main class="main-wrap">
+
+    <!-- ═══ SCREEN 1: INSTRUKSI ═══ -->
+    <div class="screen" id="screenIntro">
+      <div class="intro-card">
+
+        <div class="intro-badge reveal"><i class="fa-solid fa-list-check"></i> Tes Resmi</div>
+        <h1 class="intro-title reveal">Tes Gaya Belajar</h1>
+        <p class="intro-sub reveal">
+          Temukan gaya belajarmu yang paling dominan — <strong>Visual</strong>, <strong>Auditori</strong>, atau <strong>Kinestetik</strong> — dan dapatkan strategi belajar yang paling efektif untukmu.
+        </p>
+
+        <!-- Info cards -->
+        <div class="intro-meta reveal">
+          <div class="im-card">
+            <i class="fa-solid fa-clock"></i>
+            <div><strong>5–10 Menit</strong><span>Durasi tes</span></div>
+          </div>
+          <div class="im-card">
+            <i class="fa-solid fa-circle-question"></i>
+            <div><strong>20 Soal</strong><span>Pilihan ganda</span></div>
+          </div>
+          <div class="im-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div><strong>Gratis</strong><span>Tidak ada biaya</span></div>
+          </div>
+        </div>
+
+        <!-- Instruksi -->
+        <div class="instruksi-box reveal">
+          <div class="instruksi-header">
+            <i class="fa-solid fa-circle-info"></i>
+            <h3>Petunjuk Pengerjaan</h3>
+          </div>
+          <ul class="instruksi-list">
+            <li><i class="fa-solid fa-check"></i> Baca setiap pertanyaan dengan cermat sebelum menjawab.</li>
+            <li><i class="fa-solid fa-check"></i> Pilih satu jawaban yang paling sesuai dengan kebiasaanmu sehari-hari.</li>
+            <li><i class="fa-solid fa-check"></i> Tidak ada jawaban benar atau salah — jawab sejujurnya.</li>
+            <li><i class="fa-solid fa-check"></i> Jangan terlalu lama berpikir, pilih jawaban yang paling spontan.</li>
+            <li><i class="fa-solid fa-check"></i> Jawab semua soal agar hasil tes akurat.</li>
+            <li><i class="fa-solid fa-check"></i> Hasil akan langsung muncul setelah kamu menekan tombol "Lihat Hasil".</li>
+          </ul>
+        </div>
+
+        <!-- Gaya preview -->
+        <div class="gaya-preview reveal">
+          <div class="gp-item gp-visual">
+            <i class="fa-solid fa-eye"></i>
+            <span>Visual</span>
+          </div>
+          <div class="gp-item gp-auditori">
+            <i class="fa-solid fa-headphones"></i>
+            <span>Auditori</span>
+          </div>
+          <div class="gp-item gp-kinestetik">
+            <i class="fa-solid fa-hand"></i>
+            <span>Kinestetik</span>
+          </div>
+        </div>
+
+        <button class="btn-mulai reveal" id="btnMulai">
+          <i class="fa-solid fa-play"></i> Mulai Tes Sekarang
+        </button>
+
+      </div>
+    </div>
+
+    <!-- ═══ SCREEN 2: SOAL ═══ -->
+    <div class="screen hidden" id="screenQuiz">
+      <div class="quiz-wrap">
+
+        <!-- Progress -->
+        <div class="quiz-progress">
+          <div class="qp-top">
+            <span class="qp-label">Soal <span id="currentQ">1</span> dari 20</span>
+            <span class="qp-pct" id="progressPct">0%</span>
+          </div>
+          <div class="qp-bar">
+            <div class="qp-fill" id="progressFill" style="width:0%"></div>
+          </div>
+        </div>
+
+        <!-- Question card -->
+        <div class="question-card" id="questionCard">
+          <div class="q-number" id="qNumber">01</div>
+          <p class="q-text" id="qText">Pertanyaan...</p>
+          <div class="q-options" id="qOptions"></div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="quiz-nav">
+          <button class="btn-nav btn-prev" id="btnPrev" disabled>
+            <i class="fa-solid fa-arrow-left"></i> Sebelumnya
+          </button>
+          <div class="nav-dots" id="navDots"></div>
+          <button class="btn-nav btn-next" id="btnNext">
+            Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <button class="btn-submit-quiz hidden" id="btnHitung">
+          <i class="fa-solid fa-calculator"></i> Lihat Hasil
+        </button>
+
+      </div>
+    </div>
+
+    <!-- ═══ SCREEN 3: HASIL ═══ -->
+    <div class="screen hidden" id="screenResult">
+      <div class="result-wrap">
+
+        <div class="result-card" id="resultCard">
+          <!-- Diisi oleh JS -->
+        </div>
+
+        <!-- Score breakdown -->
+        <div class="score-breakdown" id="scoreBreakdown">
+          <h4>Skor Lengkap</h4>
+          <div class="sb-bars" id="sbBars"></div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="result-actions">
+          <button class="btn-action btn-ulang" id="btnUlang">
+            <i class="fa-solid fa-rotate-right"></i> Ulangi Tes
+          </button>
+          <a href="../home/home.html" class="btn-action btn-home">
+            <i class="fa-solid fa-house"></i> Kembali ke Home
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="tes.js"></script>
+</body>
+</html>

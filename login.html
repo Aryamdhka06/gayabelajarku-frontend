@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="login.css" />
+  <title>Login | GayaBelajarKu</title>
+</head>
+<body>
+
+  <!-- Background atmosphere -->
+  <div class="bg-layer">
+    <div class="blob bl1"></div>
+    <div class="blob bl2"></div>
+    <div class="blob bl3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+
+  <!-- Main card -->
+  <div class="auth-card" id="authCard">
+
+    <!-- ── LEFT PANEL ── -->
+    <div class="left-panel">
+      <div class="lp-inner">
+
+        <!-- Login panel -->
+        <div class="form-panel" id="loginPanel">
+          <div class="form-head">
+            <div class="form-icon"><i class="fa-solid fa-right-to-bracket"></i></div>
+            <h2>Selamat Datang</h2>
+            <p>Masuk ke akunmu dan lanjutkan belajar</p>
+          </div>
+
+          <form id="loginForm" novalidate>
+            <div class="field-group">
+              <label>Email</label>
+              <div class="input-wrap">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" id="email" placeholder="nama@email.com" required />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>Password</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" placeholder="••••••••" required />
+                <button type="button" class="eye-btn" id="toggleLoginPw" tabindex="-1">
+                  <i class="fa-regular fa-eye" id="eyeLoginIcon"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-meta">
+              <label class="remember-me">
+                <input type="checkbox" id="rememberMe" />
+                <span>Ingat saya</span>
+              </label>
+              <a href="#" class="forgot-link">Lupa password?</a>
+            </div>
+
+            <button type="submit" class="btn-submit" id="loginBtn">
+              <span class="btn-text"><i class="fa-solid fa-right-to-bracket"></i> Masuk</span>
+              <span class="btn-loader" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Memproses...</span>
+            </button>
+
+            <div class="form-divider"><span>atau</span></div>
+
+            <div class="social-login">
+              <button type="button" class="social-btn google-btn">
+                <i class="fa-brands fa-google"></i> Google
+              </button>
+              <button type="button" class="social-btn github-btn">
+                <i class="fa-brands fa-github"></i> GitHub
+              </button>
+            </div>
+          </form>
+
+          <p class="switch-text">
+            Belum punya akun?
+            <button type="button" class="switch-btn" id="goRegister">Daftar sekarang</button>
+          </p>
+        </div>
+
+        <!-- Register panel -->
+        <div class="form-panel hidden" id="registerPanel">
+          <div class="form-head">
+            <div class="form-icon"><i class="fa-solid fa-user-plus"></i></div>
+            <h2>Buat Akun Baru</h2>
+            <p>Bergabung dan temukan gaya belajarmu</p>
+          </div>
+
+          <form id="registerForm" novalidate>
+            <div class="field-group">
+              <label>Username</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="username" placeholder="nama kamu..." required />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>Email</label>
+              <div class="input-wrap">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" id="regEmail" placeholder="nama@email.com" required />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>Password</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="regPassword" placeholder="min. 8 karakter" required />
+                <button type="button" class="eye-btn" id="toggleRegPw" tabindex="-1">
+                  <i class="fa-regular fa-eye" id="eyeRegIcon"></i>
+                </button>
+              </div>
+              <div class="pw-strength" id="pwStrength">
+                <div class="pw-bar"><div class="pw-fill" id="pwFill"></div></div>
+                <span id="pwLabel">Kekuatan password</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="registerBtn">
+              <span class="btn-text"><i class="fa-solid fa-user-plus"></i> Daftar</span>
+              <span class="btn-loader" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Memproses...</span>
+            </button>
+          </form>
+
+          <p class="switch-text">
+            Sudah punya akun?
+            <button type="button" class="switch-btn" id="goLogin">Masuk sekarang</button>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── RIGHT PANEL ── -->
+    <div class="right-panel" id="rightPanel">
+      <div class="rp-inner">
+
+        <!-- State: Login -->
+        <div class="rp-state" id="rpLogin">
+          <div class="rp-icon-big"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>GayaBelajarKu</h3>
+          <p>Platform cerdas untuk menemukan gaya belajar terbaikmu dan memaksimalkan potensi akademik.</p>
+          <div class="rp-features">
+            <div class="rp-feat">
+              <i class="fa-solid fa-eye"></i><span>Visual</span>
+            </div>
+            <div class="rp-feat">
+              <i class="fa-solid fa-headphones"></i><span>Auditori</span>
+            </div>
+            <div class="rp-feat">
+              <i class="fa-solid fa-hand"></i><span>Kinestetik</span>
+            </div>
+          </div>
+          <div class="rp-stats">
+            <div class="rp-stat">
+              <strong>1.2K+</strong><span>Pengguna</span>
+            </div>
+            <div class="rp-div"></div>
+            <div class="rp-stat">
+              <strong>92%</strong><span>Akurasi Tes</span>
+            </div>
+            <div class="rp-div"></div>
+            <div class="rp-stat">
+              <strong>Gratis</strong><span>Selamanya</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- State: Register -->
+        <div class="rp-state hidden" id="rpRegister">
+          <div class="rp-icon-big"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Mulai Perjalananmu</h3>
+          <p>Daftarkan dirimu dan ikuti tes gaya belajar untuk strategi belajar yang lebih efektif.</p>
+          <div class="rp-steps">
+            <div class="rp-step">
+              <div class="step-num">01</div>
+              <span>Buat akun gratis</span>
+            </div>
+            <div class="rp-step">
+              <div class="step-num">02</div>
+              <span>Ikuti tes gaya belajar</span>
+            </div>
+            <div class="rp-step">
+              <div class="step-num">03</div>
+              <span>Dapatkan rekomendasi personal</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /auth-card -->
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Platform Belajar | GayaBelajarKu</title>
+</head>
+<body>
+
+  <!-- ═══ SIDEBAR KIRI ═══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      <span class="logo-text">GayaBelajarKu</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="../home/home.html" class="nav-item" data-tooltip="Home">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="../platform/index.html" class="nav-item active" data-tooltip="Platform Belajar">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Platform</span>
+      </a>
+      <a href="../ai/index.html" class="nav-item" data-tooltip="AI Support">
+        <i class="fa-solid fa-robot"></i>
+        <span>AI Support</span>
+      </a>
+      <a href="../tesgaya/index.html" class="nav-item" data-tooltip="Tes Gaya Belajar">
+        <i class="fa-solid fa-list-check"></i>
+        <span>Tes Gaya</span>
+      </a>
+      <a href="../profile/profile.html" class="nav-item" data-tooltip="Profil">
+        <i class="fa-solid fa-user"></i>
+        <span>Profil</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="nav-item" data-tooltip="Pengaturan">
+        <i class="fa-solid fa-gear"></i>
+        <span>Pengaturan</span>
+      </a>
+    </div>
+
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+  </aside>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="breadcrumb">
+          <span class="bc-sub">Referensi</span>
+          <h1 class="bc-title">Platform Belajar</h1>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-bar">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Cari platform..." />
+        </div>
+        <a href="../profile/profile.html" class="avatar-btn">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══ PAGE CONTENT ═══ -->
+    <div class="page-wrapper">
+
+      <!-- HERO BANNER -->
+      <div class="plat-hero reveal">
+        <div class="hero-orb orb1"></div>
+        <div class="hero-orb orb2"></div>
+        <div class="hero-inner">
+          <div class="hero-icon-wrap">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <div class="hero-text">
+            <h2>Referensi Platform & Sumber Belajar</h2>
+            <p>Kumpulan platform, video, dan tools terbaik untuk mendukung proses belajarmu sesuai gaya belajar.</p>
+          </div>
+          <div class="hero-stats">
+            <div class="hs-item"><strong>15</strong><span>Platform</span></div>
+            <div class="hs-div"></div>
+            <div class="hs-item"><strong>2</strong><span>Kategori</span></div>
+            <div class="hs-div"></div>
+            <div class="hs-item"><strong>100%</strong><span>Gratis Akses</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FILTER TABS -->
+      <div class="filter-tabs reveal">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-th-large"></i> Semua
+        </button>
+        <button class="filter-btn" data-filter="kursus">
+          <i class="fa-solid fa-graduation-cap"></i> Kursus
+        </button>
+        <button class="filter-btn" data-filter="video">
+          <i class="fa-brands fa-youtube"></i> Video
+        </button>
+        <button class="filter-btn" data-filter="visual">
+          <i class="fa-solid fa-eye"></i> Visual
+        </button>
+        <button class="filter-btn" data-filter="auditori">
+          <i class="fa-solid fa-headphones"></i> Auditori
+        </button>
+        <button class="filter-btn" data-filter="kinestetik">
+          <i class="fa-solid fa-hand"></i> Kinestetik
+        </button>
+      </div>
+
+      <!-- ─── SECTION: PLATFORM KURSUS ─── -->
+      <div class="section-label reveal" data-section="kursus">
+        <div class="sl-line"></div>
+        <div class="sl-content">
+          <div class="sl-icon purple"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div>
+            <h3>Platform Kursus & Pembelajaran</h3>
+            <p>Platform terstruktur dengan kurikulum lengkap dan sertifikasi.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="plat-grid" id="kursusGrid">
+
+        <a href="https://www.khanacademy.org" target="_blank"
+           class="plat-card reveal"
+           data-category="kursus" data-gaya="visual kinestetik" data-name="khan academy">
+          <div class="card-accent accent-green"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap green">
+              <i class="fa-solid fa-k"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+              <span class="gtag kinestetik-tag"><i class="fa-solid fa-hand"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Khan Academy</h4>
+          <p class="plat-desc">Materi gratis dari SD hingga SMA. Sangat cocok untuk gaya belajar visual &amp; kinestetik.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-star"></i> Gratis</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://coursera.org" target="_blank"
+           class="plat-card reveal"
+           data-category="kursus" data-gaya="auditori visual" data-name="coursera">
+          <div class="card-accent accent-blue"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap blue">
+              <i class="fa-solid fa-c"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag auditori-tag"><i class="fa-solid fa-headphones"></i></span>
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Coursera</h4>
+          <p class="plat-desc">Kursus universitas dunia dengan sertifikat. Cocok untuk belajar terstruktur.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-certificate"></i> Sertifikat</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://edx.org" target="_blank"
+           class="plat-card reveal"
+           data-category="kursus" data-gaya="visual auditori" data-name="edx">
+          <div class="card-accent accent-purple"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap purple">
+              <i class="fa-solid fa-e"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">edX</h4>
+          <p class="plat-desc">Platform MOOC internasional dengan kualitas premium dari universitas terkemuka.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-globe"></i> Internasional</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://udemy.com" target="_blank"
+           class="plat-card reveal"
+           data-category="kursus" data-gaya="kinestetik visual" data-name="udemy">
+          <div class="card-accent accent-orange"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap orange">
+              <i class="fa-solid fa-u"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag kinestetik-tag"><i class="fa-solid fa-hand"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Udemy</h4>
+          <p class="plat-desc">Kursus praktis untuk skill nyata. Sangat cocok untuk gaya belajar kinestetik.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-bolt"></i> Praktis</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://ruangguru.com" target="_blank"
+           class="plat-card reveal"
+           data-category="kursus" data-gaya="visual auditori kinestetik" data-name="ruangguru">
+          <div class="card-accent accent-pink"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap pink">
+              <i class="fa-solid fa-r"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+              <span class="gtag auditori-tag"><i class="fa-solid fa-headphones"></i></span>
+              <span class="gtag kinestetik-tag"><i class="fa-solid fa-hand"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Ruangguru</h4>
+          <p class="plat-desc">Les online, video, dan latihan soal untuk pelajar Indonesia dari SD–SMA.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-flag"></i> Indonesia</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://zenius.net" target="_blank"
+           class="plat-card reveal"
+           data-category="kursus" data-gaya="visual auditori" data-name="zenius">
+          <div class="card-accent accent-blue"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap blue">
+              <i class="fa-solid fa-z"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+              <span class="gtag auditori-tag"><i class="fa-solid fa-headphones"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Zenius</h4>
+          <p class="plat-desc">Latihan soal dan konsep mendalam. Cocok untuk persiapan ujian nasional.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-pen"></i> Ujian</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://belajar.kemdikbud.go.id/" target="_blank"
+           class="plat-card reveal"
+           data-category="kursus" data-gaya="visual kinestetik" data-name="rumah belajar online">
+          <div class="card-accent accent-teal"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap teal">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+              <span class="gtag kinestetik-tag"><i class="fa-solid fa-hand"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Rumah Belajar</h4>
+          <p class="plat-desc">Platform resmi Kemendikbud: kelas digital, bank soal, &amp; laboratorium maya.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-building-columns"></i> Resmi</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://id.duolingo.com/" target="_blank"
+           class="plat-card reveal"
+           data-category="kursus" data-gaya="kinestetik visual" data-name="duolingo">
+          <div class="card-accent accent-green"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap green">
+              <i class="fa-solid fa-language"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag kinestetik-tag"><i class="fa-solid fa-hand"></i></span>
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Duolingo</h4>
+          <p class="plat-desc">Belajar bahasa asing lewat latihan interaktif dan gamifikasi yang menyenangkan.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-gamepad"></i> Gamifikasi</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://web.perpuskita.id/" target="_blank"
+           class="plat-card reveal"
+           data-category="kursus" data-gaya="visual" data-name="perpuskita">
+          <div class="card-accent accent-purple"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap purple">
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">PerpusKita</h4>
+          <p class="plat-desc">Perpustakaan digital Indonesia dengan ribuan e-book &amp; konten interaktif.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-book-open"></i> Digital</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+      </div><!-- /kursusGrid -->
+
+      <!-- ─── SECTION: VIDEO EDUKASI ─── -->
+      <div class="section-label reveal" data-section="video">
+        <div class="sl-line"></div>
+        <div class="sl-content">
+          <div class="sl-icon pink"><i class="fa-brands fa-youtube"></i></div>
+          <div>
+            <h3>Channel &amp; Video Edukasi</h3>
+            <p>Channel YouTube pilihan dengan konten edukatif berkualitas tinggi.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="plat-grid" id="videoGrid">
+
+        <a href="https://www.youtube.com/@KokBisa" target="_blank"
+           class="plat-card reveal"
+           data-category="video" data-gaya="visual auditori" data-name="kok bisa">
+          <div class="card-accent accent-pink"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap pink">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+              <span class="gtag auditori-tag"><i class="fa-solid fa-headphones"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Kok Bisa?</h4>
+          <p class="plat-desc">Video edukasi ringan dengan penjelasan visual yang mudah dipahami semua usia.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-brands fa-youtube"></i> YouTube</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/@QuipperVideoID" target="_blank"
+           class="plat-card reveal"
+           data-category="video" data-gaya="auditori visual" data-name="quipper video">
+          <div class="card-accent accent-blue"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap blue">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag auditori-tag"><i class="fa-solid fa-headphones"></i></span>
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Quipper Video</h4>
+          <p class="plat-desc">Kanal belajar dengan video pelajaran lengkap untuk siswa Indonesia.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-brands fa-youtube"></i> YouTube</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/@Ruangguru" target="_blank"
+           class="plat-card reveal"
+           data-category="video" data-gaya="visual auditori" data-name="ruangguru youtube">
+          <div class="card-accent accent-pink"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap pink">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+              <span class="gtag auditori-tag"><i class="fa-solid fa-headphones"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Ruangguru</h4>
+          <p class="plat-desc">Video pembelajaran dan tips belajar terbaik untuk pelajar Indonesia.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-brands fa-youtube"></i> YouTube</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/@zeniuseducation" target="_blank"
+           class="plat-card reveal"
+           data-category="video" data-gaya="auditori visual" data-name="zenius education">
+          <div class="card-accent accent-blue"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap blue">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag auditori-tag"><i class="fa-solid fa-headphones"></i></span>
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Zenius Education</h4>
+          <p class="plat-desc">Video konsep belajar yang sederhana dan mudah dipahami untuk semua level.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-brands fa-youtube"></i> YouTube</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/@AyoMikir" target="_blank"
+           class="plat-card reveal"
+           data-category="video" data-gaya="visual auditori" data-name="ayo mikir">
+          <div class="card-accent accent-orange"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap orange">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+              <span class="gtag auditori-tag"><i class="fa-solid fa-headphones"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Ayo Mikir</h4>
+          <p class="plat-desc">Penjelasan dengan animasi visual menarik dan konsep yang mudah dipahami.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-brands fa-youtube"></i> YouTube</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/@KamuHarusTahu" target="_blank"
+           class="plat-card reveal"
+           data-category="video" data-gaya="auditori visual" data-name="kamu harus tahu">
+          <div class="card-accent accent-teal"></div>
+          <div class="card-top">
+            <div class="plat-icon-wrap teal">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="gaya-tags">
+              <span class="gtag auditori-tag"><i class="fa-solid fa-headphones"></i></span>
+              <span class="gtag visual-tag"><i class="fa-solid fa-eye"></i></span>
+            </div>
+          </div>
+          <h4 class="plat-name">Kamu Harus Tahu!</h4>
+          <p class="plat-desc">Konten edukatif seru dengan gaya cerita ringan dan narasi yang mudah diikuti.</p>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-brands fa-youtube"></i> YouTube</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+      </div><!-- /videoGrid -->
+
+      <!-- EMPTY STATE -->
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>Tidak ditemukan</h3>
+        <p>Coba kata kunci atau filter lain.</p>
+      </div>
+
+    </div><!-- /page-wrapper -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 <strong>GayaBelajarKu</strong> — All Rights Reserved</p>
+    </footer>
+
+  </main>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

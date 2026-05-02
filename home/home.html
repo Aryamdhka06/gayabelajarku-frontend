@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id" id="home">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
+  <title>Home | GayaBelajarKu</title>
+</head>
+<body>
+
+  <!-- ═══ SIDEBAR KIRI ═══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      <span class="logo-text">GayaBelajarKu</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#home" class="nav-item active" data-tooltip="Home">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="../platform/index.html" class="nav-item" data-tooltip="Platform Belajar">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Platform</span>
+      </a>
+      <a href="../ai/index.html" class="nav-item" data-tooltip="AI Support">
+        <i class="fa-solid fa-robot"></i>
+        <span>AI Support</span>
+      </a>
+      <a href="../tesgaya/index.html" class="nav-item" data-tooltip="Tes Gaya Belajar">
+        <i class="fa-solid fa-list-check"></i>
+        <span>Tes Gaya</span>
+      </a>
+      <a href="../profile/profile.html" class="nav-item" data-tooltip="Profil">
+        <i class="fa-solid fa-user"></i>
+        <span>Profil</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="nav-item" data-tooltip="Pengaturan">
+        <i class="fa-solid fa-gear"></i>
+        <span>Pengaturan</span>
+      </a>
+    </div>
+
+    <!-- Toggle collapse -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fa-solid fa-chevron-left" id="toggleIcon"></i>
+    </button>
+  </aside>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="breadcrumb">
+          <span class="bc-sub">Selamat Datang di</span>
+          <h1 class="bc-title">GayaBelajarKu</h1>
+        </div>
+      </div>
+      <div class="topbar-right">
+        
+        <a href="../profile/profile.html" class="avatar-btn">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ─── HERO SECTION ─── -->
+    <section class="hero-section" id="section-hero">
+      <div class="hero-left reveal">
+        <div class="hero-badge"><i class="fa-solid fa-bolt"></i> Platform Belajar Cerdas</div>
+        <h2 class="hero-title">Temukan Gaya Belajarmu,<br/><span>Maksimalkan Potensimu.</span></h2>
+        <p class="hero-sub">Belajar jadi lebih efektif saat kamu tahu metode yang paling cocok dengan cara kerjamu.</p>
+        <div class="hero-btns">
+          <a href="#section-why" class="btn-primary"><i class="fa-solid fa-play"></i> Selengkapnya</a>
+          <a href="../tesgaya/index.html" class="btn-outline"><i class="fa-solid fa-list-check"></i> Mulai Tes</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hs-item">
+            <strong>1.2K+</strong><span>Pengguna</span>
+          </div>
+          <div class="hs-divider"></div>
+          <div class="hs-item">
+            <strong>92%</strong><span>Akurasi Tes</span>
+          </div>
+          <div class="hs-divider"></div>
+          <div class="hs-item">
+            <strong>3</strong><span>Gaya Belajar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal delay-1">
+        <!-- Dashboard Mini Card -->
+        <div class="mini-dashboard">
+          <div class="md-header">
+            <div>
+              <p class="md-label">Primary</p>
+              <h3 class="md-title">Dashboard</h3>
+            </div>
+            <div class="md-avatar">GK</div>
+          </div>
+
+          <!-- Chart area -->
+          <div class="md-chart-wrap">
+            <div class="chart-header">
+              <span class="chart-title">Overview</span>
+              <div class="chart-peak">
+                <span class="peak-val">9.178</span>
+                <span class="peak-lbl">Nilai</span>
+              </div>
+            </div>
+            <div class="chart-bars">
+              <div class="bar" style="--h:40%"><span>Jan</span></div>
+              <div class="bar" style="--h:55%"><span>Feb</span></div>
+              <div class="bar" style="--h:45%"><span>Mar</span></div>
+              <div class="bar active" style="--h:85%"><span>Apr</span></div>
+              <div class="bar" style="--h:60%"><span>Mei</span></div>
+              <div class="bar" style="--h:70%"><span>Jun</span></div>
+              <div class="bar" style="--h:50%"><span>Jul</span></div>
+            </div>
+          </div>
+
+          <!-- Stats row -->
+          <div class="md-stats">
+            <div class="md-stat">
+              <span class="ms-val">748</span>
+              <span class="ms-lbl">Total Jam</span>
+            </div>
+            <div class="md-stat">
+              <span class="ms-val">9.178</span>
+              <span class="ms-lbl">Total Skor</span>
+            </div>
+            <div class="md-stat">
+              <span class="ms-val">9.200</span>
+              <span class="ms-lbl">Target</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating cards -->
+        <div class="float-card fc-visual">
+          <i class="fa-solid fa-eye"></i>
+          <div>
+            <p class="fc-name">Visual</p>
+            <p class="fc-pct">72% Match</p>
+          </div>
+          <div class="fc-bar"><div class="fc-fill" style="width:72%"></div></div>
+        </div>
+
+        <div class="float-card fc-auditori">
+          <i class="fa-solid fa-headphones"></i>
+          <div>
+            <p class="fc-name">Auditori</p>
+            <p class="fc-pct">55% Match</p>
+          </div>
+          <div class="fc-bar"><div class="fc-fill" style="width:55%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── WHY SECTION ─── -->
+    <section class="why-section" id="section-why">
+      <div class="section-header reveal">
+        <div class="section-tag"><i class="fa-solid fa-star"></i> Mengapa Penting?</div>
+        <h2>Kenapa Perlu Mengetahui Gaya Belajarmu?</h2>
+        <p>Temukan manfaat besar saat kamu memahami cara belajar paling efektif untukmu.</p>
+      </div>
+      <div class="cards-grid three-col">
+        <div class="info-card reveal">
+          <div class="ic-icon purple"><i class="fa-solid fa-bolt"></i></div>
+          <h4>Mempercepat Pemahaman</h4>
+          <p>Menyerap materi lebih cepat karena metode sesuai cara kerja otakmu sendiri.</p>
+        </div>
+        <div class="info-card reveal delay-1">
+          <div class="ic-icon pink"><i class="fa-solid fa-trophy"></i></div>
+          <h4>Tingkatkan Hasil Belajar</h4>
+          <p>Fokus dan efektivitas meningkat, berdampak langsung pada capaian akademikmu.</p>
+        </div>
+        <div class="info-card reveal delay-2">
+          <div class="ic-icon blue"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>Kurangi Kelelahan Belajar</h4>
+          <p>Strategi yang tepat membuat proses belajar terasa lebih ringan dan menyenangkan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── GAYA BELAJAR SECTION ─── -->
+    <section class="gaya-section" id="section-gaya">
+      <div class="section-header reveal">
+        <div class="section-tag"><i class="fa-solid fa-compass"></i> Tipe Belajar</div>
+        <h2>Kenali 3 Gaya Belajar Utama</h2>
+        <p>Setiap orang memiliki cara uniknya sendiri dalam memahami informasi.</p>
+      </div>
+      <div class="cards-grid three-col">
+
+        <div class="gaya-card gc-visual reveal">
+          <div class="gc-top-badge">VISUAL</div>
+          <div class="gc-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Gaya Belajar Visual</h3>
+          <p>Belajar lewat gambar, warna, diagram, video, dan tampilan visual lainnya.</p>
+          <div class="gc-progress">
+            <div class="gcp-bar"><div class="gcp-fill" style="width:72%"></div></div>
+            <span>72%</span>
+          </div>
+          <a href="../infogayabelajar/visual/visual.html" class="btn-card">
+            Detail <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="gaya-card gc-auditori reveal delay-1">
+          <div class="gc-top-badge">AUDITORI</div>
+          <div class="gc-icon"><i class="fa-solid fa-headphones"></i></div>
+          <h3>Gaya Belajar Auditori</h3>
+          <p>Belajar lewat mendengar, berbicara, dan penjelasan lisan yang jelas.</p>
+          <div class="gc-progress">
+            <div class="gcp-bar"><div class="gcp-fill" style="width:55%"></div></div>
+            <span>55%</span>
+          </div>
+          <a href="../infogayabelajar/auditori/auditori.html" class="btn-card">
+            Detail <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="gaya-card gc-kinestetik reveal delay-2">
+          <div class="gc-top-badge">KINESTETIK</div>
+          <div class="gc-icon"><i class="fa-solid fa-hand"></i></div>
+          <h3>Gaya Belajar Kinestetik</h3>
+          <p>Belajar lewat gerakan, pengalaman langsung, dan praktik nyata.</p>
+          <div class="gc-progress">
+            <div class="gcp-bar"><div class="gcp-fill" style="width:40%"></div></div>
+            <span>40%</span>
+          </div>
+          <a href="../infogayabelajar/kinestetik/kinestetik.html" class="btn-card">
+            Detail <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── FEEDBACK SECTION ─── -->
+    <section class="feedback-section reveal" id="section-feedback">
+      <div class="fb-inner">
+        <div class="fb-deco"><i class="fa-solid fa-comment-dots"></i></div>
+        <h2>Bagaimana pengalamanmu mengikuti tes gaya belajar?</h2>
+        <p>Kami ingin mendengar pendapatmu! Klik link di bawah ini.</p>
+        <div class="fb-btns">
+          <a href="mailto:mdkarya010@gmail.com" class="btn-feedback gmail">
+            <i class="fa-regular fa-envelope"></i> Kirim via Gmail
+          </a>
+          <a href="https://forms.gle/isi-dengan-link-form-kamu" target="_blank" class="btn-feedback form">
+            <i class="fa-regular fa-clipboard"></i> Google Form
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 <strong>GayaBelajarKu</strong> — All Rights Reserved</p>
+    </footer>
+
+  </main>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <script src="home.js"></script>
+</body>
+</html>

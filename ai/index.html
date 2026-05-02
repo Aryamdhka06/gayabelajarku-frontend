@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>AI Support | GayaBelajarKu</title>
+</head>
+<body>
+
+  <!-- ═══ SIDEBAR KIRI ═══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      <span class="logo-text">GayaBelajarKu</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="../home/home.html" class="nav-item" data-tooltip="Home">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="../platform/index.html" class="nav-item" data-tooltip="Platform Belajar">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Platform</span>
+      </a>
+      <a href="../ai/index.html" class="nav-item active" data-tooltip="AI Support">
+        <i class="fa-solid fa-robot"></i>
+        <span>AI Support</span>
+      </a>
+      <a href="../tesgaya/index.html" class="nav-item" data-tooltip="Tes Gaya Belajar">
+        <i class="fa-solid fa-list-check"></i>
+        <span>Tes Gaya</span>
+      </a>
+      <a href="../profile/profile.html" class="nav-item" data-tooltip="Profil">
+        <i class="fa-solid fa-user"></i>
+        <span>Profil</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="nav-item" data-tooltip="Pengaturan">
+        <i class="fa-solid fa-gear"></i>
+        <span>Pengaturan</span>
+      </a>
+    </div>
+
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+  </aside>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="breadcrumb">
+          <span class="bc-sub">Eksplorasi</span>
+          <h1 class="bc-title">AI Support</h1>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-bar">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Cari AI tools..." />
+        </div>
+        <a href="../profile/profile.html" class="avatar-btn">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══ PAGE CONTENT ═══ -->
+    <div class="page-wrapper">
+
+      <!-- HERO BANNER -->
+      <div class="ai-hero reveal">
+        <div class="ai-hero-orb orb1"></div>
+        <div class="ai-hero-orb orb2"></div>
+        <div class="ai-hero-content">
+          <div class="hero-icon-wrap">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div>
+            <h2>AI Support Tools</h2>
+            <p>Kumpulan AI terbaik yang bisa membantu kamu belajar lebih cepat, efisien, dan menyenangkan.</p>
+          </div>
+          <div class="ai-hero-stats">
+            <div class="hs-item">
+              <strong>12</strong><span>AI Tools</span>
+            </div>
+            <div class="hs-div"></div>
+            <div class="hs-item">
+              <strong>5</strong><span>Kategori</span>
+            </div>
+            <div class="hs-div"></div>
+            <div class="hs-item">
+              <strong>100%</strong><span>Gratis Coba</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FILTER TABS -->
+      <div class="filter-tabs reveal">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-th-large"></i> Semua
+        </button>
+        <button class="filter-btn" data-filter="tutor">
+          <i class="fa-solid fa-chalkboard-teacher"></i> Tutor
+        </button>
+        <button class="filter-btn" data-filter="coding">
+          <i class="fa-solid fa-code"></i> Coding
+        </button>
+        <button class="filter-btn" data-filter="writing">
+          <i class="fa-solid fa-pen-nib"></i> Writing
+        </button>
+        <button class="filter-btn" data-filter="riset">
+          <i class="fa-solid fa-magnifying-glass"></i> Riset
+        </button>
+        <button class="filter-btn" data-filter="media">
+          <i class="fa-solid fa-photo-film"></i> Media
+        </button>
+      </div>
+
+      <!-- AI CARDS GRID -->
+      <div class="ai-grid" id="aiGrid">
+
+        <a href="https://chat.openai.com" target="_blank" class="ai-card reveal" data-category="tutor" data-name="chatgpt">
+          <div class="card-glow glow-green"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(16,163,127,0.15); border-color:rgba(16,163,127,0.3);">
+              <img src="../assets/img/gpt1.jpg" alt="ChatGPT" />
+            </div>
+            <span class="card-badge badge-tutor">Tutor</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">ChatGPT</h3>
+            <p class="ai-desc">AI tutor serba bisa untuk penjelasan materi, diskusi, dan tanya jawab cepat.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-star"></i> Populer</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://gemini.google.com" target="_blank" class="ai-card reveal" data-category="tutor" data-name="google gemini">
+          <div class="card-glow glow-blue"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(66,133,244,0.15); border-color:rgba(66,133,244,0.3);">
+              <img src="../assets/img/gemini.png" alt="Gemini" />
+            </div>
+            <span class="card-badge badge-tutor">Tutor</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">Google Gemini</h3>
+            <p class="ai-desc">AI dari Google untuk penjelasan cepat, riset, dan analisis multitasking.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-brands fa-google"></i> Google</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.perplexity.ai" target="_blank" class="ai-card reveal" data-category="riset" data-name="perplexity ai">
+          <div class="card-glow glow-purple"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(124,58,237,0.15); border-color:rgba(124,58,237,0.3);">
+              <img src="../assets/img/perplexity-ai.jpg" alt="Perplexity" />
+            </div>
+            <span class="card-badge badge-riset">Riset</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">Perplexity AI</h3>
+            <p class="ai-desc">AI mesin pencari canggih untuk riset mendalam dengan sumber yang terpercaya.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-magnifying-glass"></i> Riset</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://copilot.microsoft.com" target="_blank" class="ai-card reveal" data-category="tutor" data-name="microsoft copilot">
+          <div class="card-glow glow-blue"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(0,120,212,0.15); border-color:rgba(0,120,212,0.3);">
+              <img src="../assets/img/microsoft.png" alt="Copilot" />
+            </div>
+            <span class="card-badge badge-tutor">Produktivitas</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">Microsoft Copilot</h3>
+            <p class="ai-desc">AI produktivitas dari Microsoft untuk dokumen, presentasi, dan analisis data.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-brands fa-microsoft"></i> Microsoft</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.khanacademy.org/khan-labs" target="_blank" class="ai-card reveal" data-category="tutor" data-name="khanmigo">
+          <div class="card-glow glow-orange"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(249,115,22,0.15); border-color:rgba(249,115,22,0.3);">
+              <img src="../assets/img/mceclip0.png" alt="Khanmigo" />
+            </div>
+            <span class="card-badge badge-tutor">Tutor</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">Khanmigo</h3>
+            <p class="ai-desc">Tutor AI khusus matematika dan sains dari Khan Academy yang interaktif.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-calculator"></i> Edu</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.deepl.com/translator" target="_blank" class="ai-card reveal" data-category="writing" data-name="deepl">
+          <div class="card-glow glow-teal"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.3);">
+              <img src="../assets/img/deepl-logo-png_seeklogo-470668.png" alt="DeepL" />
+            </div>
+            <span class="card-badge badge-writing">Writing</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">DeepL</h3>
+            <p class="ai-desc">AI penerjemah paling akurat di dunia untuk teks akademik dan profesional.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-language"></i> Translate</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://poe.com/" target="_blank" class="ai-card reveal" data-category="tutor" data-name="poe ai">
+          <div class="card-glow glow-pink"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(236,72,153,0.15); border-color:rgba(236,72,153,0.3);">
+              <img src="../assets/img/poe.png" alt="Poe" />
+            </div>
+            <span class="card-badge badge-tutor">Platform</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">Poe AI</h3>
+            <p class="ai-desc">Platform dengan banyak AI dalam satu tempat — GPT-4, Claude, Gemini, dan lainnya.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-layer-group"></i> Multi-AI</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://replit.com/site/ai" target="_blank" class="ai-card reveal" data-category="coding" data-name="replit ai">
+          <div class="card-glow glow-orange"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(249,115,22,0.15); border-color:rgba(249,115,22,0.3);">
+              <img src="../assets/img/replit.jpg" alt="Replit" />
+            </div>
+            <span class="card-badge badge-coding">Coding</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">Replit AI</h3>
+            <p class="ai-desc">AI coding untuk debugging, auto-complete, dan menjalankan kode langsung di browser.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-code"></i> Dev</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.descript.com/" target="_blank" class="ai-card reveal" data-category="media" data-name="descript ai">
+          <div class="card-glow glow-purple"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(124,58,237,0.15); border-color:rgba(124,58,237,0.3);">
+              <img src="../assets/img/descript.png" alt="Descript" />
+            </div>
+            <span class="card-badge badge-media">Media</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">Descript AI</h3>
+            <p class="ai-desc">AI edit audio dan video secara otomatis — transkripsi, potong, dan dubbing.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-video"></i> Media</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.blackbox.ai/" target="_blank" class="ai-card reveal" data-category="coding" data-name="blackbox ai">
+          <div class="card-glow glow-green"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(16,163,127,0.15); border-color:rgba(16,163,127,0.3);">
+              <img src="../assets/img/blackbox.png" alt="Blackbox" />
+            </div>
+            <span class="card-badge badge-coding">Coding</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">Blackbox AI</h3>
+            <p class="ai-desc">AI coding yang menjelaskan kode, generate script, dan bantu debugging cepat.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-terminal"></i> Dev</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://quillbot.com/" target="_blank" class="ai-card reveal" data-category="writing" data-name="quillbot">
+          <div class="card-glow glow-teal"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.3);">
+              <img src="../assets/img/Quillbot-logo.png" alt="QuillBot" />
+            </div>
+            <span class="card-badge badge-writing">Writing</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">QuillBot</h3>
+            <p class="ai-desc">AI parafrase dan rewrite teks cepat untuk esai, laporan, dan artikel.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-pen-nib"></i> Writing</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://www.notion.so/product/ai" target="_blank" class="ai-card reveal" data-category="writing" data-name="notion ai">
+          <div class="card-glow glow-blue"></div>
+          <div class="card-top">
+            <div class="ai-logo-wrap" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.15);">
+              <img src="../assets/img/nation.jpg" alt="Notion" />
+            </div>
+            <span class="card-badge badge-writing">Writing</span>
+          </div>
+          <div class="card-body">
+            <h3 class="ai-name">Notion AI</h3>
+            <p class="ai-desc">AI untuk membuat catatan, ringkasan, konsep, dan manajemen proyek dengan cerdas.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag"><i class="fa-solid fa-note-sticky"></i> Notes</span>
+            <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+      </div><!-- /ai-grid -->
+
+      <!-- EMPTY STATE -->
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <i class="fa-solid fa-robot"></i>
+        <h3>Tidak ditemukan</h3>
+        <p>Coba kata kunci atau filter lain.</p>
+      </div>
+
+    </div><!-- /page-wrapper -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 <strong>GayaBelajarKu</strong> — All Rights Reserved</p>
+    </footer>
+
+  </main>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <script src="ai.js"></script>
+</body>
+</html>
