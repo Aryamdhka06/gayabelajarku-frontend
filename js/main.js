@@ -153,7 +153,7 @@ loginForm.addEventListener('submit', async (e) => {
       localStorage.setItem('user', JSON.stringify(data.user));
       showToast('Login berhasil! Mengalihkan...', 'success');
       setTimeout(() => {
-        window.location.href = 'home/home.html';
+        window.location.href = './pages/home/home.html';
       }, 1000);
     } else {
       showToast('Login gagal: ' + (data.error || 'Cek email & password'), 'error');
